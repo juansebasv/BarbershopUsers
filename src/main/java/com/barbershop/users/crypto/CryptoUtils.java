@@ -1,4 +1,4 @@
-package com.restaurant.users.crypto;
+package com.barbershop.users.crypto;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;

@@ -1,4 +1,4 @@
-package com.restaurant.users.dto;
+package com.barbershop.users.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

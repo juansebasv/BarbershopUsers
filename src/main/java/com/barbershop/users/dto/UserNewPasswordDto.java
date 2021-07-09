@@ -1,4 +1,4 @@
-package com.restaurant.users.dto;
+package com.barbershop.users.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +13,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class UserNewPasswordDto implements Serializable {
 
-    UserDto user;
+    String email;
+    String oldPassword;
     String newPassword;
 
 }

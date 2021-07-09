@@ -1,6 +1,6 @@
-package com.restaurant.users.service;
+package com.barbershop.users.service;
 
-import com.restaurant.users.dto.UserDto;
+import com.barbershop.users.dto.UserDto;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public interface UserService {
 
     public void recoveryPassword() throws Exception;
 
-    public void changePassword(UserDto userDto, String newPassword) throws Exception;
+    public void changePassword(String email, String oldPassword, String newPassword) throws Exception;
 
     public List<UserDto> getUsers() throws Exception;
 

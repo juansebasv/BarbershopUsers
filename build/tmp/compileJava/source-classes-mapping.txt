@@ -1,20 +1,29 @@
-com/restaurant/users/UsersApplication.java
- com.restaurant.users.UsersApplication
-com/restaurant/users/dto/UserDto.java
- com.restaurant.users.dto.UserDto
- com.restaurant.users.dto.UserDto$UserDtoBuilder
-com/restaurant/users/service/UserService.java
- com.restaurant.users.service.UserService
-com/restaurant/users/service/UserServiceImp.java
- com.restaurant.users.service.UserServiceImp
-com/restaurant/users/util/CryptoUtils.java
- com.restaurant.users.util.CryptoUtils
-com/restaurant/users/model/User.java
- com.restaurant.users.model.User
- com.restaurant.users.model.User$UserBuilder
-com/restaurant/users/controller/ControllerUsers.java
- com.restaurant.users.controller.ControllerUsers
-com/restaurant/users/util/Constants.java
- com.restaurant.users.util.Constants
-com/restaurant/users/repository/UserRepository.java
- com.restaurant.users.repository.UserRepository
+com/barbershop/users/util/Constants.java
+ com.barbershop.users.util.Constants
+com/barbershop/users/dto/UserDto.java
+ com.barbershop.users.dto.UserDto
+ com.barbershop.users.dto.UserDto$UserDtoBuilder
+com/barbershop/users/crypto/CryptoUtils.java
+ com.barbershop.users.crypto.CryptoUtils
+com/barbershop/users/repository/UserRepository.java
+ com.barbershop.users.repository.UserRepository
+com/barbershop/users/service/UserServiceImp.java
+ com.barbershop.users.service.UserServiceImp
+com/barbershop/users/service/UserService.java
+ com.barbershop.users.service.UserService
+com/barbershop/users/crypto/CryptoService.java
+ com.barbershop.users.crypto.CryptoService
+com/barbershop/users/model/User.java
+ com.barbershop.users.model.User
+ com.barbershop.users.model.User$UserBuilder
+com/barbershop/users/config/SwaggerConfig.java
+ com.barbershop.users.config.SwaggerConfig
+com/barbershop/users/UsersApplication.java
+ com.barbershop.users.UsersApplication
+com/barbershop/users/util/Validations.java
+ com.barbershop.users.util.Validations
+com/barbershop/users/controller/ControllerUsers.java
+ com.barbershop.users.controller.ControllerUsers
+com/barbershop/users/dto/UserNewPasswordDto.java
+ com.barbershop.users.dto.UserNewPasswordDto
+ com.barbershop.users.dto.UserNewPasswordDto$UserNewPasswordDtoBuilder

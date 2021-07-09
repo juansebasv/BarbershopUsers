@@ -1,4 +1,4 @@
-package com.restaurant.users.model;
+package com.barbershop.users.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

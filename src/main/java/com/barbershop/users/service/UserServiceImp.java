@@ -1,10 +1,10 @@
-package com.restaurant.users.service;
+package com.barbershop.users.service;
 
-import com.restaurant.users.crypto.CryptoService;
-import com.restaurant.users.dto.UserDto;
-import com.restaurant.users.model.User;
-import com.restaurant.users.repository.UserRepository;
-import com.restaurant.users.util.Constants;
+import com.barbershop.users.crypto.CryptoService;
+import com.barbershop.users.dto.UserDto;
+import com.barbershop.users.model.User;
+import com.barbershop.users.repository.UserRepository;
+import com.barbershop.users.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -68,21 +68,20 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public void changePassword(UserDto userDto, String newPassword) throws Exception {
+    public void changePassword(String email, String oldPassword, String newPassword) throws Exception {
 
-        Optional<User> userOptional = userRepository.findById(userDto.getId());
-        User varUser = userOptional.get();
-
-        if (!(CryptoService.decrypt(varUser.getPassword(), Constants.secretWord)).equals(userDto.getPassword())) {
-            throw new Exception("La contraseña digitada no corresponde con el usuario");
-        }
-
-        if (userDto.getPassword().equals(newPassword)) {
-            throw new Exception("Las contraseñas actual debe ser diferente a la anterior");
+        User varUser = userRepository.findByEmail(email);
+        if (null == varUser) {
+            throw new Exception("Usuario no existe en el sistema");
         }
 
         String passDecrypt = CryptoService.decrypt(varUser.getPassword(), Constants.secretWord);
-        if (passDecrypt.equals(newPassword)) {
+
+        if (!(passDecrypt).equals(oldPassword)) {
+            throw new Exception("La contraseña digitada no corresponde con el usuario");
+        }
+
+        if ((oldPassword.equals(newPassword)) || (passDecrypt.equals(newPassword))) {
             throw new Exception("Las contraseñas actual debe ser diferente a la anterior");
         }
 

@@ -1,4 +1,4 @@
-package com.restaurant.users.util;
+package com.barbershop.users.util;
 
 public class Constants {
 
